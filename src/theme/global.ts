@@ -35,41 +35,4 @@ export const globalStyles = {
       },
     },
   },
-  '.ql-editor': {
-    fontFamily: 'Inter',
-    fontSize: 'md',
-    padding: '0.75rem 0.9375rem',
-    '& a': {
-      color: 'link',
-    },
-    '&.ql-blank::before': {
-      fontStyle: 'normal',
-      fontWeight: textTheme.variants.Medium.fontWeight,
-      color: 'placeholder',
-    },
-  },
-  '.ql-toolbar.ql-snow': {
-    borderTopLeftRadius: 'base',
-    borderTopRightRadius: 'base',
-    borderColor: 'border !important',
-    padding: '0.5rem',
-    borderWidth: 'sm',
-    transition: 'border-color 0.2s',
-  },
-  '.ql-container.ql-snow': {
-    height: 'calc(100% - 2.7125rem)',
-    borderColor: 'border !important',
-    borderBottomLeftRadius: 'base',
-    borderBottomRightRadius: 'base',
-    borderWidth: 'sm',
-    transition: 'border-color 0.2s',
-  },
-  '.ql-toolbar button': {
-    width: '1.75rem !important',
-    height: '1.5rem !important',
-    padding: '0.1875rem 0.3125rem !important',
-  },
-  '.ql-tooltip': {
-    zIndex: '1 !important',
-  },
 }; 

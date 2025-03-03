@@ -1,5 +1,4 @@
 import { extendTheme } from '@chakra-ui/react';
-import { theme as proTheme } from '@chakra-ui/pro-theme';
 import { textTheme } from './text';
 import { globalStyles } from './global';
 import { COLORS } from './colors';
@@ -97,6 +96,6 @@ const override = {
   },
 };
 
-const index = extendTheme(override, proTheme);
+const index = extendTheme(override);
 
 export default index; 
