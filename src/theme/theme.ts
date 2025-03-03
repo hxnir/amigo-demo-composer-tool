@@ -1,8 +1,29 @@
 import { extendTheme } from '@chakra-ui/react';
 import { theme as proTheme } from '@chakra-ui/pro-theme';
+import { modalTheme } from './components/modal';
+import { checkboxTheme } from './components/checkbox';
+import { listTheme } from './components/list';
+import { inputTheme } from './components/input';
 import { textTheme } from './text';
+import { tableTheme } from './components/table';
+import { buttonTheme } from './components/button';
+import { radioTheme } from './components/radio';
+import { textareaTheme } from './components/textarea';
+import { codeTheme } from './components/code';
+import { stepperTheme } from './components/stepper';
+import { tabsTheme } from './components/tabs';
+import { linkTheme } from './components/link';
+import { accordionTheme } from './components/accordion';
+import { switchTheme } from './components/switch';
+import { avatarAnatomy } from './components/avatar';
+import { drawerTheme } from './components/drawer';
 import { globalStyles } from './global';
 import { COLORS } from './colors';
+import { cardTheme } from './components/card';
+import navBarButton from './components/navBarButton';
+import { menuTheme } from './components/menu';
+import sideNavBarButton from './components/sideNavBarButton';
+import { tagTheme } from './components/tag';
 
 const override = {
   colors: COLORS,
@@ -66,6 +87,7 @@ const override = {
     global: globalStyles,
   },
   components: {
+    Drawer: drawerTheme,
     Container: {
       baseStyle: {
         maxW: {
@@ -82,7 +104,16 @@ const override = {
         },
       },
     },
+    Switch: switchTheme,
     Text: textTheme,
+    Checkbox: checkboxTheme,
+    Code: codeTheme,
+    List: listTheme,
+    Link: linkTheme,
+    Input: inputTheme,
+    Textarea: textareaTheme,
+    Table: tableTheme,
+    Stepper: stepperTheme,
     Alert: {
       variants: {
         subtle: (props: { status: string }) => ({
@@ -94,9 +125,51 @@ const override = {
         }),
       },
     },
+    Modal: modalTheme,
+    Card: cardTheme,
+    Button: buttonTheme,
+    Radio: radioTheme,
+    Tabs: tabsTheme,
+    Accordion: accordionTheme,
+    Avatar: avatarAnatomy,
+    Divider: {
+      baseStyle: {
+        borderColor: 'borderLight',
+        borderWidth: 'sm',
+      },
+    },
+    NavBarButton: navBarButton,
+    SideNavBarButton: sideNavBarButton,
+    Menu: menuTheme,
+    Tooltip: {
+      baseStyle: {
+        border: '0.0625rem solid rgba(0,0,0,0.6)',
+        px: 2.5,
+        py: 1.5,
+      },
+    },
+    Popover: {
+      baseStyle: {
+        content: {
+          borderRadius: 'xl',
+        },
+        popper: {
+          zIndex: 1500,
+        },
+      },
+      variants: {
+        responsive: {
+          content: {
+            maxWidth: 'unset',
+            width: 'unset',
+          },
+        },
+      },
+    },
+    Tag: tagTheme,
   },
 };
 
 const index = extendTheme(override, proTheme);
 
-export default index; 
+export default index;
