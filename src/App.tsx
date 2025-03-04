@@ -2,6 +2,7 @@ import { ChakraProvider, Box, Text, Flex } from '@chakra-ui/react'
 import customTheme from './theme/theme'
 import AimBadge from './components/AimBadge'
 import PageLayout from './components/PageLayout'
+import { Activity, InfoCircle } from "@untitled-ui/icons-react";
 
 function App() {
   return (
@@ -26,11 +27,14 @@ function App() {
               <Text variant="Regular" size="TextSM">
                 An example of the badge usage, use it for all the badges that
                 you need!
+                Note the text is capitalized, this is intentional.
               </Text>
               <Flex gap={1}>
-                <AimBadge size="md" text="success" color="green" />
-                <AimBadge size="md" text="error" color="red" />
-                <AimBadge size="md" text="warning" color="yellow" />
+                <AimBadge size="md" text="Success" color="green" />
+                <AimBadge size="md" text="Error" color="red" />
+                <AimBadge size="md" text="Warning" color="yellow" />
+                <AimBadge size="md" text="Activity" color="primary" leftIcon={Activity} />
+                <AimBadge size="md" text="Info" color="primary" rightIcon={InfoCircle} />
               </Flex>
             </Flex>
           </Flex>
