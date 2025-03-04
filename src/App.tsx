@@ -2,7 +2,7 @@ import { ChakraProvider, Box, Text, Flex } from '@chakra-ui/react'
 import customTheme from './theme/theme'
 import AimBadge from './components/AimBadge'
 import PageLayout from './components/PageLayout'
-import { Activity, InfoCircle } from "@untitled-ui/icons-react";
+import { Activity, InfoCircle } from "./components/icons";
 
 function App() {
   return (
